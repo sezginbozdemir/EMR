@@ -1,0 +1,11 @@
+# Install
+
+
+# Terminology
+Node: JavaScript Runtime Environment
+NPM:  JavaScript Package Manager
+Package: Milletin yazdigi kod
+JSX: JavaScript + HTML
+
+# Commands
+npx create-react-app
