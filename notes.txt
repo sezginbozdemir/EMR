@@ -2,10 +2,12 @@
 
 
 # Terminology
-Node: JavaScript Runtime Environment
-NPM:  JavaScript Package Manager
+Node:    JavaScript Runtime Environment
+NPM:     JavaScript Package Manager
 Package: Milletin yazdigi kod
-JSX: JavaScript + HTML
+JSX:     JavaScript + HTML
+Component
 
 # Commands
-npx create-react-app
+New React app: npx create-react-app
+Run the app: npm start
