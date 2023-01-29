@@ -5,7 +5,7 @@ import Andreea from "./Andreea"
 function Comp({ arg }) {
   return (
     <div>
-      <p>Comp</p>
+      <p>{arg}</p>
       <p>{arg}</p>
     </div>
   )
