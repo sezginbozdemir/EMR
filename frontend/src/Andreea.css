@@ -3,3 +3,12 @@
   border-color: transparent;
   display: inline;
 }
+#sezgin {
+  background-color: black;
+  border-color: black;
+  display: inline;
+  color: white;
+  height: 150px;
+  resize: none;
+}
+

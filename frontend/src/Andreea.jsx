@@ -6,14 +6,24 @@ import "./Andreea.css";
 
 const Andreea = () => {
   const [areaText, setAreaText] = useState("")
-  const [buttonText, setButtonText] = useState("CE FACI BAI")
+  const  [buttonText, setButtonText] = useState("CHANGE THE TEXT FROM THE TEXTAREA BELOW")
 
   return <>
-    <p>
+    <p style={{color:"red"}}>
       {buttonText}
     </p>
 
-    <textarea value={areaText} onKeyDown={e => setAreaText(areaText + e.key)}>
+    <textarea id="sezgin" 
+    value={areaText} 
+    onKeyDown={e => {
+      if (e.key === "Backspace") {
+        setAreaText(areaText.substring(0, areaText.length -1))
+      } else {
+        setAreaText(areaText + e.key)
+        
+      }
+    }}>
+    
     </textarea>
 
     <button id="andreea" onClick={() => setButtonText(areaText)}>
