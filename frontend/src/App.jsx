@@ -1,4 +1,5 @@
 import React from 'react';
+import Andreea from "./Andreea"
 
 // reusable component
 function Comp({ arg }) {
@@ -17,15 +18,9 @@ const App = () => (
   <div>
     <div></div>
     {stringArray.map(x => <Comp arg={x} />)}
+    <Andreea />
   </div>
 )
 
 export default App
 
-export const andreea = 
-<>
-  <p id="andreea"> "CE FACI BAI" </p>
-  <button type= "button"
- onclick={document.getElementById('andreea').innerHTML = 'MATA ANDREEA'}>dai </button>
-
-</>
