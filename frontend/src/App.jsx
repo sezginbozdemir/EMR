@@ -3,17 +3,24 @@ import Andreea from "./Andreea"
 import Mainheader from "./Mainheader"
 
 
+// !!!
+// bunu import yapip kullanmamissin
+// !!!
 import Sezgin from "./Sezgin"
 import Button from "react-bootstrap/Button"
 import "./Andreea.css"
 import emrlogo from "./emrlogo.png"
 
 
-
-
+// !!!
+// bunu da kullanmiyosun
+// !!!
 function myFunction() {
   // Declare variables
   var input, filter, ul, li, a, i, txtValue;
+  // !!!
+  // siktirtme documentini amk askldjfaksdfha
+  // !!!
   input = document.getElementById('myInput');
   filter = input.value.toUpperCase();
   ul = document.getElementById("myUL");
@@ -30,7 +37,6 @@ function myFunction() {
     }
   }
 }
-
 
 // reusable component
 function Comp({ arg }) {
@@ -52,64 +58,71 @@ const App = () => {
       return <Andreea />
     }
     if (page === "sezgin") {
-      return <Andreea/>
+      return <Andreea />
     }
   }
 
   return (
     <body>
-      <div><Mainheader/></div>
+      <div><Mainheader /></div>
       <div hidden>
 
-      <div class="container text-center">
-  <div class="row">
-    <div class="col">
-      <img src={emrlogo} style={{ width: "250px", height: "100px" }} />
-    </div>
-    <div class="col">
-      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products..">
- </input>
-    </div>
-    <div class="col">
-      3 of 3
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      1 of 7
-    </div>
-    <div class="col">
-      2 of 7
-    </div>
-    <div class="col">
-      3 of 7
-    </div>
-    <div class="col">
-      4 of 7
-    </div>
-    <div class="col">
-      5 of 7
-    </div>
-    <div class="col">
-      6 of 7
-    </div>
-    <div class="col">
-      7 of 7
-    </div>
-  </div>
-</div>
-</div>
-  
-     <div hidden>
-      {stringArray.map(x => <Comp arg={x} />)}
+
+        {/* 
+          !!!
+          Bunun yerine "react-bootstrap"dan Container import edip onu kullan 
+          sikicem artik xdddd
+          !!!
+        */}
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <img src={emrlogo} style={{ width: "250px", height: "100px" }} />
+            </div>
+            <div class="col">
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products..">
+              </input>
+            </div>
+            <div class="col">
+              3 of 3
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              1 of 7
+            </div>
+            <div class="col">
+              2 of 7
+            </div>
+            <div class="col">
+              3 of 7
+            </div>
+            <div class="col">
+              4 of 7
+            </div>
+            <div class="col">
+              5 of 7
+            </div>
+            <div class="col">
+              6 of 7
+            </div>
+            <div class="col">
+              7 of 7
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div hidden>
+        {stringArray.map(x => <Comp arg={x} />)}
       </div>
       <div hidden>
-      
-     <Button onClick={() => setCurrentPage("andrea")}>Andrea</Button>
-      <Button onClick={() => setCurrentPage("sezgin")}>Sezgin</Button>
-      <Button onClick={() => setCurrentPage("alican")}>Alican</Button>
-      {renderPage(currentPage)}
-    </div>
+
+        <Button onClick={() => setCurrentPage("andrea")}>Andrea</Button>
+        <Button onClick={() => setCurrentPage("sezgin")}>Sezgin</Button>
+        <Button onClick={() => setCurrentPage("alican")}>Alican</Button>
+        {renderPage(currentPage)}
+      </div>
     </body>
   )
 }
