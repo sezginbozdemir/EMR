@@ -13,7 +13,7 @@ const Andreea = () => {
   return (
     <div style={{ backgroundColor: "red" }}>
       <Button />
-      <p style={{ color: "red" }}>
+      <p style={{ color: "yellow" }}>
         {buttonText}
       </p>
 
