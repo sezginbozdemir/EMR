@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import "./Andreea.css"
+import React from "react"
 
 const Dropdown = ({ submenus }) => {
     return (

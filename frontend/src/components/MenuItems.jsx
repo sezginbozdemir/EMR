@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import "./Andreea.css"
 import Dropdown from './Dropdown';
 
 export const menuItems = [

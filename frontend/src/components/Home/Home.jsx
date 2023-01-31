@@ -1,10 +1,9 @@
 import React, { useState } from "react"
-import "./Andreea.css"
-import ComandaAcum from "./ComandaAcum"
-import christmas from "./img/christmas.png"
-import man from "./img/man.png"
-import woman from "./img/woman.png"
-import HomepageCarousel from "./HomepageCarousel"
+//import ComandaAcum from "./components/ComandaAcum"
+import christmas from "../../img/christmas.png"
+import man from "../../img/man.png"
+import woman from "../../img/woman.png"
+import Promotions from "../Promotions"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -12,7 +11,7 @@ import Col from 'react-bootstrap/Col';
 function ContainerExample() {
     return (
       <Container>
-        <Row><HomepageCarousel /></Row>
+        <Row><Promotions /></Row>
         <Row>
         <Col id="col1">
         

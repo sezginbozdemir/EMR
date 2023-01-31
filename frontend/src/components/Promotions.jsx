@@ -1,8 +1,7 @@
-import React, { useState } from "react"
-import "./Andreea.css"
-import halate from "./img/halate.png"
-import odorizante from "./img/odorizante.png"
-import pijama from "./img/pijama.png"
+import React from "react"
+import halate from "../img/halate.png"
+import odorizante from "../img/odorizante.png"
+import pijama from "../img/pijama.png"
 import Carousel from 'react-bootstrap/Carousel';
 
 function CarouselFadeExample() {
