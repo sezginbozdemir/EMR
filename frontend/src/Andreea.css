@@ -15,7 +15,7 @@
   resize: none;
 }
 #myInput {
-  background-image: url('searchicon.png'); /* Add a search icon to input */
+  background-image: url('img/searchicon.png'); /* Add a search icon to input */
   background-size: contain;
   background-position: left; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
@@ -51,3 +51,19 @@
   display: none;
  }
 
+ #comanda-acum {
+  background-size: contain;
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 0px 0px 0px 0px; /* Add some padding */
+  border: 1px solid rgb(0, 0, 0); /* Add a grey border */
+  margin-bottom: 0px; /* Add some space below the input */
+}
+#col1 {
+  padding: 20px 20px 20px 20px; /* Add some padding */
+  
+}
+#carousel1 {
+  border: 1px solid rgb(0, 0, 0);
+  
+}

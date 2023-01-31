@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 
-import standardnotes from "./standardnotes.png"
-
+import standardnotes from "./img/standardnotes.png"
 import "./Andreea.css"
 
 import Button from 'react-bootstrap/Button'

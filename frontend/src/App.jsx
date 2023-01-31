@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Andreea from "./Andreea"
 import Mainheader from "./Mainheader"
+import HomePage from "./Homepage"
+import "./Andreea.css"
 
 
 // !!!
@@ -8,8 +10,7 @@ import Mainheader from "./Mainheader"
 // !!!
 import Sezgin from "./Sezgin"
 import Button from "react-bootstrap/Button"
-import "./Andreea.css"
-import emrlogo from "./emrlogo.png"
+import emrlogo from "./img/emrlogo.png"
 
 
 // !!!
@@ -65,6 +66,7 @@ const App = () => {
   return (
     <body>
       <div><Mainheader /></div>
+      <div><HomePage /></div>
       <div hidden>
 
 
