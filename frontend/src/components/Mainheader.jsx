@@ -3,8 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import emrlogo from "../img/emrlogo.png"
-import Navbar from "./Navbar";
-import Dropdown from "./Dropdown";
 
 
 
@@ -24,14 +22,11 @@ function ContainerExample() {
            placeholder="Search for products..">
         </input>
         </Col>
+        qwe
           <Col>
-    <Dropdown />
           </Col>
         </Row>
         <Row>
-          <Col>
-            <Navbar/> 
-          </Col>
         </Row>
       </Container>
     );

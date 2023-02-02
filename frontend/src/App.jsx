@@ -6,7 +6,7 @@ import "./Andreea.css"
 const App = () => (
   <body>
     <div><Mainheader /></div>
-    <div><HomePage /></div>
+    <div><HomePage /></div>  
   </body>
 )
 
