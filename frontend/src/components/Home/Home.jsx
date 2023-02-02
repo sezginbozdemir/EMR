@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-//import ComandaAcum from "./components/ComandaAcum"
+import React from "react"
 import christmas from "../../img/christmas.png"
 import man from "../../img/man.png"
 import woman from "../../img/woman.png"

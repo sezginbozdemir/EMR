@@ -1,15 +1,38 @@
 import React from "react"
 
-const Dropdown = ({ submenus }) => {
-    return (
-      <ul className="dropdown">
-        {submenus.map((submenu, index) => (
-          <li key={index} className="menu-items">
-            <a href={submenu.url}>{submenu.title}</a>
-          </li>
-        ))}
-      </ul>
-    );
-  };
+class Dropdown extends React.Component {
+    state = {
+      isOpen: false
+    };
   
-  export default Dropdown;
+    toggleOpen = () => this.setState({ isOpen: !this.state.isOpen });
+
+ render() {
+        const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
+        return (
+          <div className="dropdown" onClick={this.toggleOpen}>
+            <button
+              className="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+            >
+              Dropdown
+            </button>
+            <div className={menuClass} aria-labelledby="dropdownMenuButton">
+              <a className="dropdown-item" href="#nogo">
+                Item 1
+              </a>
+              <a className="dropdown-item" href="#nogo">
+                Item 2
+              </a>
+              <a className="dropdown-item" href="#nogo">
+                Item 3
+              </a>
+            </div>
+          </div>
+        );
+      }
+    }
+    export default Dropdown

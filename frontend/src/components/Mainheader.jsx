@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import emrlogo from "../img/emrlogo.png"
 import Navbar from "./Navbar";
+import Dropdown from "./Dropdown";
+
 
 
 function ContainerExample() {
@@ -11,7 +13,9 @@ function ContainerExample() {
       <Container>
         <Row>
           <Col>
-          <img src={emrlogo} style={{ width: "250px", height: "100px" }} />
+          <img src={emrlogo}
+          alt="Emr Engros"
+           style={{ width: "250px", height: "100px" }} />
           </Col>
           <Col style={{ paddingRight: "300px" }}>
           <input type="text"
@@ -20,13 +24,13 @@ function ContainerExample() {
            placeholder="Search for products..">
         </input>
         </Col>
-          <Col>3 of 3</Col>
+          <Col>
+    <Dropdown />
+          </Col>
         </Row>
         <Row>
           <Col>
-          <a>
             <Navbar/> 
-          </a>
           </Col>
         </Row>
       </Container>

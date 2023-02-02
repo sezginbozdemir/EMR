@@ -4,7 +4,7 @@ import odorizante from "../img/odorizante.png"
 import pijama from "../img/pijama.png"
 import Carousel from 'react-bootstrap/Carousel';
 
-function CarouselFadeExample() {
+function Promotions () {
   return (
     <Carousel id="carousel1" fade>
       <Carousel.Item>
@@ -13,10 +13,6 @@ function CarouselFadeExample() {
           src={halate}
           alt="halate"
         />
-        <Carousel.Caption>
-          <h3></h3>
-          <p></p>
-        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -24,11 +20,6 @@ function CarouselFadeExample() {
           src={pijama}
           alt="pijama"
         />
-
-        <Carousel.Caption>
-          <h3></h3>
-          <p></p>
-        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -36,14 +27,9 @@ function CarouselFadeExample() {
           src={odorizante}
           alt="odorizante"
         />
-
-        <Carousel.Caption>
-          <h3></h3>
-          <p></p>
-        </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   );
 }
 
-export default CarouselFadeExample;
+export default Promotions;
