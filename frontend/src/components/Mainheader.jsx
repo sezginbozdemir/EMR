@@ -15,14 +15,13 @@ function ContainerExample() {
           alt="Emr Engros"
            style={{ width: "250px", height: "100px" }} />
           </Col>
-          <Col style={{ paddingRight: "300px" }}>
+          <Col>
           <input type="text"
            id="myInput" 
            onkeyup="myFunction()" 
            placeholder="Search for products..">
         </input>
         </Col>
-        qwe
           <Col>
           </Col>
         </Row>
