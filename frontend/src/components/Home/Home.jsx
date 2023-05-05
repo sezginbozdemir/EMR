@@ -13,36 +13,27 @@ function ContainerExample() {
         <Row><Promotions /></Row>
         <Row>
         <Col id="col1">
-        
-        <input id="comanda-acum"type="image" src={man}
-        alt="man"
-        href="www.google.com"
-        ></input>
-        <div class="text-block">
-    <h4>AMK</h4>
-    <p>BUNU FOTOGRAFIN ICINE KOYAMADIM AQ</p>
-  </div>
+        <div className="image-container1">
+  <img src={man} alt="man" className="image"></img>
+  <div className="text">Clothes for Man</div>
+  <button className="comanda-acum" alt="comanda-acum">Shop Now</button>
+         </div>
+
         
         </Col>
-        <Col id="col1">
-        <input id="comanda-acum"type="image" src={christmas} 
-        alt="christmas"
-        href="www.google.com"
-        ></input>
-        <div class="text-block">
-    <h4>AMK</h4>
-    <p>BUNU FOTOGRAFIN ICINE KOYAMADIM AQ</p>
-  </div>
+        <Col id="col2">
+        <div className="image-container2">
+  <img src={christmas} alt="man" className="image"></img>
+  <div className="text">Clothes for Christmas</div>
+  <button className="comanda-acum" alt="comanda-acum">Shop Now</button>
+         </div>
         </Col>
-        <Col id="col1">
-        <input id="comanda-acum"type="image" src={woman} 
-        alt="woman"
-        href="www.google.com"
-        ></input>
-        <div class="text-block">
-    <h4>AMK</h4>
-    <p>BUNU FOTOGRAFIN ICINE KOYAMADIM AQ</p>
-  </div>
+        <Col id="col3">
+        <div className="image-container3">
+  <img src={woman} alt="man" classNamesssssse="image"></img>
+  <div className="text">Clothes for WoMan</div>
+  <button className="comanda-acum" alt="comanda-acum">Shop Now</button>
+         </div>
         </Col>
         </Row>
         </Container>

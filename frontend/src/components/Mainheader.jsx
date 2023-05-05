@@ -3,6 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import emrlogo from "../img/emrlogo.png"
+import Navbar from "./Navbarmenu";
+
 
 
 
@@ -18,17 +20,16 @@ function ContainerExample() {
           <Col>
           <input type="text"
            id="myInput" 
-           onkeyup="myFunction()" 
+           /*onKeyUp="myFunction()"*/ 
            placeholder="Search for products..">
         </input>
         </Col>
-          <Col>
-          </Col>
+        <Col></Col> 
         </Row>
         <Row>
+          <Navbar />
         </Row>
       </Container>
     );
   }
   export default ContainerExample;
-  

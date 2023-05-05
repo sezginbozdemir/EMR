@@ -1,13 +1,31 @@
+import React, { useState } from "react";
 import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function Navbar() {
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleDropdownClick = () => {
+    if (showDropdown) {
+      setShowDropdown(false);
+    } else {
+      setShowDropdown(true);
+    }
+  };
+
+
   return (
-    <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-    </DropdownButton>
+    <Dropdown>
+    <Dropdown.Toggle onClick={handleDropdownClick}>
+      First Dropdown Item
+    </Dropdown.Toggle>
+    <Dropdown.Menu show={showDropdown}>
+      <Dropdown.Item>Second Item</Dropdown.Item>
+      <Dropdown.Item>Third Item</Dropdown.Item>
+    </Dropdown.Menu>
+  </Dropdown>
+   
   );
 }
 
