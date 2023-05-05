@@ -30,7 +30,7 @@ function ContainerExample() {
         </Col>
         <Col id="col3">
         <div className="image-container3">
-  <img src={woman} alt="man" classNamesssssse="image"></img>
+  <img src={woman} alt="man" className="image"></img>
   <div className="text">Clothes for WoMan</div>
   <button className="comanda-acum" alt="comanda-acum">Shop Now</button>
          </div>
