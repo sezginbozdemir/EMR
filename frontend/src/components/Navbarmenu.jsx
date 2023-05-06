@@ -1,33 +1,57 @@
-import React from 'react';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function VariantsExample() {
+function Navbarmenu() {
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleMouseEnter = () => setShowDropdown(true);
+  const handleMouseLeave = () => setShowDropdown(false);
+
   return (
-    <>
-      {['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger'].map(
-        (variant) => (
-          <DropdownButton
-            as={ButtonGroup}
-            key={variant}
-            id={`dropdown-variants-${variant}`}
-            variant={variant.toLowerCase()}
-            title={variant}
-          >
-            <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-            <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-            <Dropdown.Item eventKey="3" active>
-              Active Item
-            </Dropdown.Item>
-            <Dropdown.Divider />
-            <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
-          </DropdownButton>
-        ),
-      )}
-    </>
+    <Navbar bg="light" expand="lg">
+      <NavDropdown
+        title="Categories"
+        id="basic-nav-dropdown"
+        show={showDropdown}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <NavDropdown.Item href="#women">Woman</NavDropdown.Item>
+        <NavDropdown.Item href="#men">Man</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="#home-parfumes">Home Parfumes</NavDropdown.Item>
+      </NavDropdown>
+      <NavDropdown
+        title="Woman Clothes"
+        id="basic-nav-dropdown"
+        show={showDropdown}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <NavDropdown.Item href="#">Jeans</NavDropdown.Item>
+        <NavDropdown.Item href="#">Pants</NavDropdown.Item>
+        <NavDropdown.Item href="#">Underwears</NavDropdown.Item>
+        <NavDropdown.Item href="#">Shirts</NavDropdown.Item>
+        <NavDropdown.Item href="#">Blouses</NavDropdown.Item>
+      </NavDropdown>
+      <NavDropdown
+        title="Man Clothes"
+        id="basic-nav-dropdown"
+        show={showDropdown}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <NavDropdown.Item href="#">Jeans</NavDropdown.Item>
+        <NavDropdown.Item href="#">Pants</NavDropdown.Item>
+        <NavDropdown.Item href="#">Underwears</NavDropdown.Item>
+        <NavDropdown.Item href="#">Shirts</NavDropdown.Item>
+        <NavDropdown.Item href="#">Blouses</NavDropdown.Item>
+      </NavDropdown>
+      <Nav.Link href="#">Home Parfumes</Nav.Link>
+    </Navbar>
   );
 }
 
-export default VariantsExample;
+export default Navbarmenu;

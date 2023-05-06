@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import emrlogo from "../img/emrlogo.png"
+import Navbarmenu from "./Navbarmenu";
 
 
 
@@ -26,6 +27,7 @@ function ContainerExample() {
         <Col></Col> 
         </Row>
         <Row>
+          <Navbarmenu />
         </Row>
       </Container>
     );
