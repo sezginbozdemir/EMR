@@ -11,11 +11,12 @@ import Navbarmenu from "./Navbarmenu";
 function ContainerExample() {
     return (
       <Container>
-        <Row>
+        <Row className="mainHeaderRow">
           <Col>
-          <img src={emrlogo}
+          <img className="mainLogo"
+          src={emrlogo}
           alt="Emr Engros"
-           style={{ width: "250px", height: "100px" }} />
+          /* style={{ width: "250px", height: "100px" }} *//>
           </Col>
           <Col>
           <input type="text"
@@ -26,7 +27,7 @@ function ContainerExample() {
         </Col>
         <Col></Col> 
         </Row>
-        <Row>
+        <Row className="navbarRow">
           <Navbarmenu />
         </Row>
       </Container>

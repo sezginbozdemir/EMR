@@ -27,27 +27,7 @@
   margin-top: 18px ;
 }
 
-#myUL {
-  /* Remove default list styling */
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
 
-#myUL li a {
-  border: 1px solid #ddd; /* Add a border to all links */
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6; /* Grey background color */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove default text underline */
-  font-size: 18px; /* Increase the font-size */
-  color: black; /* Add a black text color */
-  display: block; /* Make it into a block element to fill the whole list */
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee; /* Add a hover effect to all links, except for headers */
-}
 
 
  #comanda-acum {
@@ -75,9 +55,9 @@ width: 33% ;
 }
 #carousel1 {
   border: 1px solid rgb(0, 0, 0);
-  width: 1275px ;
-  height: 300px ;
-  margin-left: -80px ;
+  width: 2000px ;
+  height: 500px ;
+  margin-left: -320px ;
   overflow: hidden;
 
   
@@ -119,21 +99,9 @@ width: 33% ;
    transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
 }
-/*.image:hover {
-  opacity: 0.5;
-  transition: opacity 0.3s ease-in-out;
-}*/
-/*.image:hover {
-  transform: translateX(50px);
-  transition: transform 0.3s ease-in-out;
-}*/
 
 
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
 
 .text {
   position: absolute;
@@ -157,19 +125,22 @@ width: 33% ;
 }
 .carouselImage {
   display: block;
-  width: 1275px ;
-  height: 300px ;
+  width: 2000px ;
+  height: 500px ;
   overflow: hidden;
 }
+
 .carouselConteiner {
-
-
+  position: relative; /* set the parent container to relative positioning */
 }
+
+
+
 
 .custom-dots-container {
   position: absolute;
-  bottom: 300px;
-  left: 90%;
+  bottom: 20px;
+  left: 110%;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
@@ -177,8 +148,8 @@ width: 33% ;
   z-index: 1;
 }
 .custom-dot {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: #ccc;
   margin: 5px;
@@ -187,4 +158,82 @@ width: 33% ;
 
 .custom-dot.active {
   background-color: #000;
+}
+
+
+#categories {
+  margin-right: 40px;
+  font-size: 30px;
+  font-family: 'Roboto Condensed',sans-serif ; 
+  color: #333;
+  font-style: thin;
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+
+
+}
+
+#man-clothes {
+  margin-right: 40px;
+  font-size: 30px;
+  font-family: 'Roboto Condensed',sans-serif ; 
+  color: #333;
+  font-style: thin;
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#woman-clothes {
+  margin-right: 40px;
+  font-size: 30px;
+  font-family: 'Roboto Condensed',sans-serif ; 
+  color: #333;
+  font-style: thin;
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dropdown-item {
+  margin-right: 40px;
+  font-size: 25px;
+  font-family: 'Roboto Condensed',sans-serif ; 
+  color: #333;
+  font-style: thin;
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+.dropdown-toggle::before {
+  float: right;
+  content: "\f13a"; /* replace with your custom icon code */
+  font-family: "Font Awesome 5 Free"; /* replace with your custom font name */
+  font-weight: 600; /* replace with your custom font weight */
+  margin-left: 15px; /* adjust as needed */
+
+}
+
+
+
+.dropdown-toggle::after {
+
+  display:none;
+
+}
+
+.mainHeaderRow {
+  margin-left: -20%;
+  height: 130px;
+}
+
+.mainLogo {
+  width: 300px;
+  height: 200px;
+}
+
+.navbarRow {
+  margin-left: 10%;
+}
+
+.emrNavbar {
+  background-color: white;
 }

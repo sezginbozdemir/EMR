@@ -1,22 +1,38 @@
 import React, { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Navbarmenu() {
-  const [showDropdown, setShowDropdown] = useState(false);
+  const [dropdownStates, setDropdownStates] = useState([
+    { id: 'categories', show: false },
+    { id: 'woman-clothes', show: false },
+    { id: 'man-clothes', show: false },
+    { id: 'home-parfumes', show: false },
+  ]);
 
-  const handleMouseEnter = () => setShowDropdown(true);
-  const handleMouseLeave = () => setShowDropdown(false);
+  const handleMouseEnter = (id) => {
+    const updatedStates = dropdownStates.map((dropdownState) =>
+      dropdownState.id === id ? { ...dropdownState, show: true } : { ...dropdownState, show: false }
+    );
+    setDropdownStates(updatedStates);
+  };
+
+  const handleMouseLeave = (id) => {
+    const updatedStates = dropdownStates.map((dropdownState) =>
+      dropdownState.id === id ? { ...dropdownState, show: false } : dropdownState
+    
+    );
+    setDropdownStates(updatedStates);
+  };
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className='emrNavbar'  expand="lg">
       <NavDropdown
         title="Categories"
-        id="basic-nav-dropdown"
-        show={showDropdown}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        id="categories"
+        show={dropdownStates.find((state) => state.id === 'categories').show}
+        onMouseEnter={() => handleMouseEnter('categories')}
+        onMouseLeave={() => handleMouseLeave('categories')}
       >
         <NavDropdown.Item href="#women">Woman</NavDropdown.Item>
         <NavDropdown.Item href="#men">Man</NavDropdown.Item>
@@ -25,10 +41,10 @@ function Navbarmenu() {
       </NavDropdown>
       <NavDropdown
         title="Woman Clothes"
-        id="basic-nav-dropdown"
-        show={showDropdown}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        id="woman-clothes"
+        show={dropdownStates.find((state) => state.id === 'woman-clothes').show}
+        onMouseEnter={() => handleMouseEnter('woman-clothes')}
+        onMouseLeave={() => handleMouseLeave('woman-clothes')}
       >
         <NavDropdown.Item href="#">Jeans</NavDropdown.Item>
         <NavDropdown.Item href="#">Pants</NavDropdown.Item>
@@ -38,10 +54,10 @@ function Navbarmenu() {
       </NavDropdown>
       <NavDropdown
         title="Man Clothes"
-        id="basic-nav-dropdown"
-        show={showDropdown}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        id="man-clothes"
+        show={dropdownStates.find((state) => state.id === 'man-clothes').show}
+        onMouseEnter={() => handleMouseEnter('man-clothes')}
+        onMouseLeave={() => handleMouseLeave('man-clothes')}
       >
         <NavDropdown.Item href="#">Jeans</NavDropdown.Item>
         <NavDropdown.Item href="#">Pants</NavDropdown.Item>
@@ -49,9 +65,9 @@ function Navbarmenu() {
         <NavDropdown.Item href="#">Shirts</NavDropdown.Item>
         <NavDropdown.Item href="#">Blouses</NavDropdown.Item>
       </NavDropdown>
-      <Nav.Link href="#">Home Parfumes</Nav.Link>
-    </Navbar>
-  );
-}
+
+      </Navbar>
+     );
+     }
 
 export default Navbarmenu;
